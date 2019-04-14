@@ -1,0 +1,35 @@
+#banner {
+    background-color: rgb(102, 34, 34);
+    width: 80%;
+    margin: 0 auto;
+}
+#bannerTitle {
+    color: white!important;
+}
+#bannerSubtitle {
+    color: white!important;
+}
+#artistImage {
+    background-color: aqua;
+}
+#artistMain {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+}
+#artistInfo {
+    background-color: green;
+    height: 300px;
+}
+#data {
+    width: 80%;
+    margin: 0 auto;
+}
+#randomAlbums {
+    background-color: blue;
+    height: 300px;
+}
+#recentlySearched {
+    background-color: red;
+    height: 300px;
+}
