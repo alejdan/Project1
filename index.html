@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Music My way</title>
+    <title>My-coin</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
@@ -19,9 +19,9 @@
 
                 <div class="container" id="banner">
 
-                    <h1 class="title is-1" id="bannerTitle">Music My Way</h1>
+                    <h1 class="title is-1" id="bannerTitle">My-coin</h1>
 
-                    <h2 class="subtitle" id="bannerSubtitle">Thousands of artists in one place</h2>
+                    <h2 class="subtitle" id="bannerSubtitle">The main cryptocurrencies in one place</h2>
 
                 </div>
 
@@ -31,7 +31,7 @@
                 
                         <div class="field">
                 
-                            <input type="text" class="input" placeholder="Artist">
+                            <input type="text" class="input" placeholder="cryptocurrency" id="searchInput">
                 
                         </div>
                 
@@ -41,7 +41,7 @@
                 
                         <div class="level-item">
                 
-                            <button class="button is-primary">Search</button>
+                            <button class="button is-primary" id="search">Search</button>
                 
                         </div>
                 
@@ -57,15 +57,16 @@
 
     <div class="block">
 
-        <div class="columns" id="artistMain">
+        <div class="columns" id="Main">
 
-            <div class="column" id="artistImage">
-
+            <div class="column" id="Image">
+                
+                <img id="coinImg">
 
 
             </div>
 
-            <div class="column" id="artistInfo">
+            <div class="column" id="Info">
 
 
 
@@ -80,7 +81,7 @@
 
         <div class="columns" id="data">
 
-            <div class="column" id="randomAlbums">
+            <div class="column" id="trades">
 
 
 
@@ -88,7 +89,26 @@
 
             <div class="column" id="recentlySearched">
 
+                <table class="table">
 
+                    <thead>
+
+                        <tr>
+
+                            <th>Recently Searched Coins</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="recentTable">
+
+                        
+
+
+                    </tbody>
+
+                </table>
 
 
             </div>
@@ -96,6 +116,11 @@
         </div>
 
     </div>
+
+
+    <script src="assets/javascript/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    
 
 </body>
 </html>

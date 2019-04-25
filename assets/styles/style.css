@@ -9,23 +9,24 @@
 #bannerSubtitle {
     color: white!important;
 }
-#artistImage {
+#Image {
     background-color: aqua;
 }
-#artistMain {
+#Main {
     width: 80%;
     margin: 0 auto;
     height: 300px;
 }
-#artistInfo {
+#Info {
     background-color: green;
     height: 300px;
+    color: white;
 }
 #data {
     width: 80%;
     margin: 0 auto;
 }
-#randomAlbums {
+#trades {
     background-color: blue;
     height: 300px;
 }
