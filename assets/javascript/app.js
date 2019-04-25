@@ -66,8 +66,12 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            $("#info").html(response);
-            console.log(response);
+            console.log(currencyName);
+            console.log(response[conversions[currencyName]]);
+            $("#mxn").html(response[conversions[currencyName]].MXN + " MXN");
+            $("#usd").html(response[conversions[currencyName]].USD + " USD");
+            $("#eur").html(response[conversions[currencyName]].EUR + " EUR");
+            
         });
 
     }
