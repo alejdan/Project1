@@ -10,90 +10,135 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 </head>
 <body>
-    
-    <div class="block">
 
-        <section class="hero" id="banner">
+    <div class="container">
 
-            <div class="hero-body">
 
-                <div class="container" id="banner">
+        <section class="block">
 
-                    <h1 class="title is-1" id="bannerTitle">My-coin</h1>
+            <section class="hero" id="banner">
 
-                    <h2 class="subtitle" id="bannerSubtitle">The main cryptocurrencies in one place</h2>
+                <div class="hero-body">
 
-                </div>
+                    <div class="container" id="banner">
 
-                <div class="level-right">
-                
-                    <div class="level-item">
-                
-                        <div class="field">
-                
-                            <input type="text" class="input" placeholder="cryptocurrency" id="searchInput">
-                
-                        </div>
-                
+                        <h1 class="title is-1" id="bannerTitle">My-coin</h1>
+
+                        <h2 class="subtitle" id="bannerSubtitle">The main cryptocurrencies in one place</h2>
+
                     </div>
-                
+
                     <div class="level-right">
-                
+                    
                         <div class="level-item">
-                
-                            <button class="button is-primary" id="search">Search</button>
-                
+                    
+                            <div class="field">
+                    
+                                <input type="text" class="input" placeholder="cryptocurrency" id="searchInput">
+                    
+                            </div>
+                    
                         </div>
-                
+                    
+                        <div class="level-right">
+                    
+                            <div class="level-item">
+                    
+                                <button class="button is-primary" id="search">Search</button>
+                    
+                            </div>
+                    
+                        </div>
+                    
                     </div>
-                
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <section class="block">
+
+            <div class="columns" id="Main">
+
+                <div class="column" id="Image">
+                    
+                    <img id="coinImg">
+
+
+                </div>
+
+                <div class="column" id="Info">
+
+                    <div id="mxn">
+
+                    </div>
+
+                    <div id="usd">
+
+                    </div>
+
+                    <div id="eur">
+
+                    </div>
+
+                    <div id="btc">
+                    
+                    </div>
+
+                    <div id="eth">
+                    
+                    </div>
+
+                    <div id="ltc">
+                    
+                    </div>
+
+                    <div id="xrp">
+                    
+                    </div>
+
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
-    </div>
+        <section class="block">
 
-    <div class="block">
+            <div class="columns" id="data">
 
-        <div class="columns" id="Main">
-
-            <div class="column" id="Image">
-                
-                <img id="coinImg">
+                <div class="column" id="trades">
 
 
-            </div>
-
-            <div class="column" id="Info">
-
-                <div id="mxn">
 
                 </div>
 
-                <div id="usd">
+                <div class="column" id="recentlySearched">
 
-                </div>
+                    <table class="table">
 
-                <div id="eur">
+                        <thead>
 
-                </div>
+                            <tr>
 
-                <div id="btc">
-                
-                </div>
+                                <th>Recently Searched Coins</th>
 
-                <div id="eth">
-                
-                </div>
+                            </tr>
 
-                <div id="ltc">
-                
-                </div>
+                        </thead>
 
-                <div id="xrp">
-                
+                        <tbody id="recentTable">
+
+                            
+
+
+                        </tbody>
+
+                    </table>
+
+
                 </div>
 
             </div>
@@ -101,48 +146,6 @@
         </div>
 
     </div>
-
-    <div class="block">
-
-        <div class="columns" id="data">
-
-            <div class="column" id="trades">
-
-
-
-            </div>
-
-            <div class="column" id="recentlySearched">
-
-                <table class="table">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>Recently Searched Coins</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody id="recentTable">
-
-                        
-
-
-                    </tbody>
-
-                </table>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-
     <script src="assets/javascript/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
     

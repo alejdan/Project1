@@ -118,9 +118,9 @@ $(document).ready(function () {
     });
        
 
-    /*$("#search").on("click", function () {
+    $("#search").on("click", function () {
 
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=cryptocurrency&api_key=fhzJX3gZXGwyBzoihxydlvs8IiED0KjI&limit=1"
+        var queryURL = "https://api.giphy.com/v1/gifs/random?tag=cryptocurrency&api_key=fhzJX3gZXGwyBzoihxydlvs8IiED0KjI&limit=1"
 
         $.ajax({
             url: queryURL,
@@ -128,23 +128,19 @@ $(document).ready(function () {
 
         }).then(function (response) {
 
+            console.log(response);
+
             var result = response.data;
 
             var gifDiv = $("<div>");
 
             var cryptoGif = $("<img>");
 
-            franchiseImg.addClass("individualImage");
+            cryptoGif.addClass("individualImage");
 
-            franchiseImg.attr("src", result.images.fixed_height_still.url);
+            cryptoGif.attr("src", result.images.fixed_height.url);
 
-            franchiseImg.attr("data-active", result.images.fixed_height.url);
-
-            franchiseImg.attr("data-still", result.images.fixed_height_still.url);
-
-            franchiseImg.attr("data-state", "still");
-
-            $(document).on("click", ".individualImage", function () {
+            /*$(document).on("click", ".individualImage", function () {
 
                 if ($(this).attr("src") === $(this).attr("data-still")) {
 
@@ -160,13 +156,15 @@ $(document).ready(function () {
 
                 }
 
-        });
+            });*/
 
             gifDiv.prepend(cryptoGif);
 
+            $("#trades").empty();
+
             $("#trades").prepend(gifDiv);
 
-    });*/
+        });
 
 
 
@@ -178,7 +176,9 @@ $(document).ready(function () {
 
 
 
+
+
+    });
 
 
 });
-
