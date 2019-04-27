@@ -61,28 +61,28 @@ $(document).ready(function () {
     
     // Get prices
     function getPrices (currencyName) {
-        var queryURL = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=" + conversions[currencyName] + "&tsyms=MXN,USD,EUR&api_key=" + cryptoAPIKey;
+        var queryURL = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=" + conversions[currencyName] + "&tsyms=MXN,USD,EUR,BTC,LTC,ETH,XRP&api_key=" + cryptoAPIKey;
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
+
             console.log(currencyName);
             console.log(response[conversions[currencyName]]);
             $("#mxn").html(response[conversions[currencyName]].MXN + " MXN");
             $("#usd").html(response[conversions[currencyName]].USD + " USD");
             $("#eur").html(response[conversions[currencyName]].EUR + " EUR");
-            
+            $("#btc").html(response[conversions[currencyName]].BTC + " BTC");
+            $("#eth").html(response[conversions[currencyName]].ETH + " ETH");
+            $("#ltc").html(response[conversions[currencyName]].LTC + " LTC");
+            $("#xrp").html(response[conversions[currencyName]].XRP + " XRP");
+
         });
 
     }
         //do a get to the API
         //display prices
     // Get 10 trades
-    function getTrades(currencyName){
-
-
-
-    }
         //do a get to the API
         //display trades in a table
     var dataRef = firebase.database();
@@ -118,7 +118,55 @@ $(document).ready(function () {
     });
        
 
+    /*$("#search").on("click", function () {
 
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=cryptocurrency&api_key=fhzJX3gZXGwyBzoihxydlvs8IiED0KjI&limit=1"
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+
+        }).then(function (response) {
+
+            var result = response.data;
+
+            var gifDiv = $("<div>");
+
+            var cryptoGif = $("<img>");
+
+            franchiseImg.addClass("individualImage");
+
+            franchiseImg.attr("src", result.images.fixed_height_still.url);
+
+            franchiseImg.attr("data-active", result.images.fixed_height.url);
+
+            franchiseImg.attr("data-still", result.images.fixed_height_still.url);
+
+            franchiseImg.attr("data-state", "still");
+
+            $(document).on("click", ".individualImage", function () {
+
+                if ($(this).attr("src") === $(this).attr("data-still")) {
+
+                    $(this).attr("src", $(this).attr("data-active"));
+
+                    $(this).attr("data-state", "active");
+
+                } else {
+
+                    $(this).attr("src", $(this).attr("data-still"))
+
+                    $(this).attr("data-state", "still");
+
+                }
+
+        });
+
+            gifDiv.prepend(cryptoGif);
+
+            $("#trades").prepend(gifDiv);
+
+    });*/
 
 
 

@@ -11,6 +11,7 @@
 }
 #Image {
     background-color: aqua;
+    align-content: center;
 }
 #Main {
     width: 80%;
@@ -19,7 +20,7 @@
 }
 #Info {
     background-color: green;
-    height: 300px;
+    height: 100%;
     color: white;
 }
 #data {
