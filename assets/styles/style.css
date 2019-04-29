@@ -27,11 +27,16 @@
     width: 80%;
     margin: 0 auto;
 }
-#trades {
-    background-color: blue;
-    height: 400px;
+.white {
+    color: white;
 }
-#recentlySearched {
-    background-color: red;
-    height: 300px;
+#searchInput {
+    border-radius: 5px;
+    height: 37px;
+    padding: 5px;
+}
+#logo {
+
+    margin: 0 auto;
+
 }
