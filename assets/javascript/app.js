@@ -37,8 +37,8 @@ $(document).ready(function () {
 
     var imageObj = {
 
-        bitcoin:"http://pngimg.com/uploads/bitcoin/bitcoin_PNG25.png",
-        ethereum: "https://www.ethereum.org/images/logos/ETHEREUM-ICON_Black_small.png",
+        bitcoin:"http://pngimg.com/uploads/bitcoin/bitcoin_PNG16.png",
+        ethereum: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png",
         ripple: "https://cdn.freebiesupply.com/logos/large/2x/ripple-2-logo-png-transparent.png",
         litecoin: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Official_Litecoin_Logo.png"
 
