@@ -4,24 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <style>
-        #red {
-            height: 100px;
-            width: 100px;
-            background-color: red;
-        }
-    
-    
-    
-    </style>
+    <title>My-coin</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 </head>
 <body>
 
-    <div class="square" id="red">
+    <section class="hero has-background-black">
 
-    </div>
+        <div class="hero-body">
+
+            <div class="container">
+
+                <h1 class="title white">
+                    My Coin
+                </h1>
+
+                <p class="subtitle white">
+                    Your main cryptocurrencies in one place
+                </p>
+
+                <form>
+                    <input list="cryptocurrencies" name="coins" id="searchInput" placeholder="cryptocurrency">
+                    <datalist id="cryptocurrencies">
+                        <option value="Bitcoin">
+                        <option value="Ethereum">
+                        <option value="Ripple">
+                        <option value="Litecoin">
+                        <option value="Tron">
+                        <option value="Neo">
+                        <option value="Dash">
+                    </datalist>
+                    <a class="button is-primary" id="search">Search</a>
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section has-background-light">
+
+        <div class="container">
+
+            <div class="columns">
+
+                <div class="column">
+
+                    <div class="notification is-primary level-item has-text-centered">
+
+                        <figure class="image is-200x200">
+
+                            <img id="logo">
+
+                        </figure>
+
+                    </div>
+
+                </div>
+
+                <div class="column">
+                
+                    <div class="notification is-link">
+
+                        <h1 class="title">Exchange Rates</h1>
+                
+                        <div id="mxn">
+
+                        </div>
+                        <div id="usd">
+                        
+                        </div>
+                        <div id="eur">
+                        
+                        </div>
+                        <div id="btc">
+                        
+                        </div>
+                        <div id="eth">
+                        
+                        </div>
+                        <div id="xrp">
+                        
+                        </div>
+                        <div id="ltc">
+                        
+                        </div>
+                        <div id="trx">
+                        
+                        </div>
+                        <div id="neo">
+                        
+                        </div>
+                        <div id="dash">
+                        
+                        </div>
+                
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+        
+            <div class="columns">
+        
+                <div class="column">
+        
+                    <div class="notification is-danger level-item has-text-centered">
+        
+                        <figure class="image center is-256x256" id="trades">
+        
+        
+        
+                        </figure>
+        
+                    </div>
+        
+                </div>
+        
+                <div class="column">
+        
+        
+        
+                    <div class="notification is-warning">
+        
+                        <h1 class="title">Recently searched coins</h1>
+        
+                        <table id="recentTable">
+        
+                        </table>
+        
+        
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+
+    </section>
     
+        
+    
+
+    <script src="assets/javascript/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    
+
+
 </body>
 </html>

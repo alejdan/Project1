@@ -1,0 +1,42 @@
+#banner {
+    background-color: rgb(102, 34, 34);
+    width: 80%;
+    margin: 0 auto;
+}
+#bannerTitle {
+    color: white!important;
+}
+#bannerSubtitle {
+    color: white!important;
+}
+#Image {
+    background-color: aqua;
+    align-content: center;
+}
+#Main {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+}
+#Info {
+    background-color: green;
+    height: 100%;
+    color: white;
+}
+#data {
+    width: 80%;
+    margin: 0 auto;
+}
+.white {
+    color: white;
+}
+#searchInput {
+    border-radius: 5px;
+    height: 37px;
+    padding: 5px;
+}
+#logo {
+    margin: 0 auto;
+    height: 220px;
+    width: 220px;
+}
