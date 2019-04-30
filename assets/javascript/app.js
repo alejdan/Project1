@@ -40,7 +40,10 @@ $(document).ready(function () {
         bitcoin:"http://pngimg.com/uploads/bitcoin/bitcoin_PNG16.png",
         ethereum: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png",
         ripple: "https://cdn.freebiesupply.com/logos/large/2x/ripple-2-logo-png-transparent.png",
-        litecoin: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Official_Litecoin_Logo.png"
+        litecoin: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Official_Litecoin_Logo.png",
+        tron: "https://cdn1.iconfinder.com/data/icons/cryptocurrency-19/512/cryptocurrency-coin-currency-digital-07-512.png",
+        neo: "https://upload.wikimedia.org/wikipedia/commons/0/07/NEO_%28cryptocurrency%29_logo.svg",
+        dash: "https://media.dash.org/wp-content/uploads/Dash-D-white_on_blue_circle.png"
 
     }
 
@@ -56,7 +59,10 @@ $(document).ready(function () {
         bitcoin: "BTC",
         ethereum: "ETH",
         litecoin: "LTC",
-        ripple: "XRP"
+        ripple: "XRP",
+        tron: "TRX",
+        neo: "NEO",
+        dash: "DASH"
 
     }
 
@@ -65,7 +71,7 @@ $(document).ready(function () {
     
     // Get prices
     function getPrices (currencyName) {
-        var queryURL = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=" + conversions[currencyName] + "&tsyms=MXN,USD,EUR,BTC,LTC,ETH,XRP&api_key=" + cryptoAPIKey;
+        var queryURL = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=" + conversions[currencyName] + "&tsyms=MXN,USD,EUR,BTC,LTC,ETH,XRP,TRX,NEO,DASH&api_key=" + cryptoAPIKey;
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -80,7 +86,9 @@ $(document).ready(function () {
             $("#eth").html(response[conversions[currencyName]].ETH + " ETH");
             $("#ltc").html(response[conversions[currencyName]].LTC + " LTC");
             $("#xrp").html(response[conversions[currencyName]].XRP + " XRP");
-            
+            $("#trx").html(response[conversions[currencyName]].TRX + " TRX");
+            $("#neo").html(response[conversions[currencyName]].NEO + " NEO");
+            $("#dash").html(response[conversions[currencyName]].DASH + " DASH");
         });
 
     }
@@ -124,7 +132,7 @@ $(document).ready(function () {
 
     $("#search").on("click", function () {
 
-        var queryURL = "https://api.giphy.com/v1/gifs/random?tag=cryptocurrency&api_key=fhzJX3gZXGwyBzoihxydlvs8IiED0KjI&limit=1"
+        var queryURL = "https://api.giphy.com/v1/gifs/random?tag=money&api_key=fhzJX3gZXGwyBzoihxydlvs8IiED0KjI&limit=1"
 
         $.ajax({
             url: queryURL,
