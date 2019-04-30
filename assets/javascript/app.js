@@ -80,7 +80,7 @@ $(document).ready(function () {
             $("#eth").html(response[conversions[currencyName]].ETH + " ETH");
             $("#ltc").html(response[conversions[currencyName]].LTC + " LTC");
             $("#xrp").html(response[conversions[currencyName]].XRP + " XRP");
-
+            
         });
 
     }
